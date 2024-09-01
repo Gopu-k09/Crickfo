@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Cricketers Database{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Cricketers Database</h1>
+    <table class="table table-bordered table-striped mt-4">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cricketer in cricketers %}
+            <tr>
+                <td>{{ cricketer.fullname }}</td>
+                <td>{{ cricketer.country }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
