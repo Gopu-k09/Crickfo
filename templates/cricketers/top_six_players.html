@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Top 6 Batsmen{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Top 6 Batsmen</h1>
+    <ul class="list-group mt-4">
+        {% for player in top_six_players %}
+        <li class="list-group-item">{{ player }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
